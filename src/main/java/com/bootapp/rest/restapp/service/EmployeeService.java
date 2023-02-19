@@ -69,6 +69,12 @@ public class EmployeeService {
 		return employeeRepository.findAll();
 	}
 
+	public void deleteEmployeeById(int id) {
+		// TODO Auto-generated method stub
+		employeeRepository.deleteById(id);
+		
+	}
+
 }
 
 
