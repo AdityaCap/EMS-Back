@@ -24,5 +24,11 @@ public class ProjectService {
 	public List<Project> getProjectByEmployeeId(Employee employee) {
 		return employee.getProjects();
 	}
+	public List<Project> getAllProject() {
+		
+		
+		 
+		return projectRepository.findAll();
+	}
 
 }

@@ -251,10 +251,16 @@ public class EmployeeController {
 		List<Project> list =   projectService.getProjectByEmployeeId(employee);
 		return ResponseEntity.status(HttpStatus.OK).body(list); 
 	}
+
 	@DeleteMapping("api/employee/delete/{id}")
 	public void deleteEmployee(@PathVariable("id") int id) {
 		employeeService.deleteEmployeeById(id);
-		System.out.println("Employee Deleted Successfully");
+		System.out.println("Employee Deleted Successfully");}
+
+	@GetMapping("/api/project/all")
+	public List<Project> getAllProject(){
+		return projectService.getAllProject();
+
 	}
 	
 }
