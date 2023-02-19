@@ -250,6 +250,11 @@ public class EmployeeController {
 		List<Project> list =   projectService.getProjectByEmployeeId(employee);
 		return ResponseEntity.status(HttpStatus.OK).body(list); 
 	}
+	@GetMapping("/api/project/all")
+	public List<Project> getAllProject(){
+		return projectService.getAllProject();
+	}
+	
 }
 
 
